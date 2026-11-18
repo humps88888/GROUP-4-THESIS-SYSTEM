@@ -1,0 +1,1005 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+      content="NovaTech Security Management System">
+
+<title>NovaTech Security Management System</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+<aside class="sidebar" id="sidebar">
+
+<div class="logo">
+
+    <div class="logo-icon"> 
+        H
+    </div>
+
+    <div>
+        <h2>Home Security Management System</h2>
+        <span>Security System</span>
+    </div>
+
+</div>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <a href="#dashboard"
+       class="nav-link active">
+
+        <span>▦</span>
+        <span>Dashboard</span>
+
+    </a>
+
+
+    <a href="#clients"
+       class="nav-link">
+
+        <span>👤</span>
+        <span>Clients</span>
+
+    </a>
+
+
+    <a href="#register"
+       class="nav-link">
+
+        <span>＋</span>
+        <span>Register Client</span>
+
+    </a>
+
+
+    <a href="#camera"
+       class="nav-link">
+
+        <span>◉</span>
+        <span>Camera</span>
+
+    </a>
+
+
+    <a href="#records"
+       class="nav-link">
+
+        <span>▤</span>
+        <span>Security Records</span>
+
+    </a>
+
+</nav>
+
+
+<!-- SIDEBAR FOOTER -->
+
+<div class="sidebar-bottom">
+
+    <span>Home Security</span>
+
+    <small>
+        © 2026
+    </small>
+
+</div>
+
+</aside>
+
+
+
+<!-- ====MAIN CONTENT===-->
+
+<main class="main">
+
+<!-- ========TOP BAR======= -->
+
+<header class="topbar">
+
+<div class="topbar-left">
+
+    <!-- MOBILE MENU -->
+
+    <button
+        type="button"
+        id="menuButton"
+        class="menu-button"
+        aria-label="Open menu">
+
+        ☰
+
+    </button>
+
+
+    <div class="page-title">
+
+        <h1 id="pageTitle">
+            Security Dashboard
+        </h1>
+
+        <p id="pageSubtitle">
+            Manage clients, records and security events.
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- ADMIN -->
+
+<div class="admin">
+
+    <div class="admin-avatar">
+        A
+    </div>
+
+    <div>
+
+        <strong>
+            Administrator
+        </strong>
+
+        <small>
+            System Admin
+        </small>
+
+    </div>
+
+</div>
+
+</header>
+
+
+
+<!-- =====DASHBOARD======= -->
+
+<section
+    id="dashboard"
+    class="page-section">
+
+<!-- WELCOME -->
+
+<div class="welcome">
+
+    <div>
+
+        <span class="eyebrow">
+            Home Security Management System
+        </span>
+
+        <h2>
+            Smart Security Management
+        </h2>
+
+        <p>
+            Manage client information, security records,
+            camera recordings and security events from
+            other place.
+        </p>
+
+    </div>
+
+
+    <a
+        href="#register"
+        class="primary-button">
+
+        + Register Client
+
+    </a>
+
+</div>
+
+
+
+<!-- ==========STATISTICS============ -->
+
+<div class="stats">
+
+
+    <!-- TOTAL CLIENTS -->
+
+    <div class="stat-card">
+
+        <div class="stat-icon blue">
+            👥
+        </div>
+
+        <div>
+
+            <span>
+                Total Clients
+            </span>
+
+            <strong id="totalClients">
+                0
+            </strong>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- REGISTERED TODAY -->
+
+    <div class="stat-card">
+
+        <div class="stat-icon green">
+            ✓
+        </div>
+
+        <div>
+
+            <span>
+                Registered Today
+            </span>
+
+            <strong id="todayClients">
+                0
+            </strong>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- VIDEO RECORDS -->
+
+    <div class="stat-card">
+
+        <div class="stat-icon purple">
+            ◉
+        </div>
+
+        <div>
+
+            <span>
+                Video Records
+            </span>
+
+            <strong id="totalVideos">
+                0
+            </strong>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- SECURITY RECORDS -->
+
+    <div class="stat-card">
+
+        <div class="stat-icon orange">
+            ▣
+        </div>
+
+        <div>
+
+            <span>
+                Security Records
+            </span>
+
+            <strong id="totalRecords">
+                0
+            </strong>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =================================================
+     RECENT CLIENTS
+================================================= -->
+
+<div class="panel">
+
+    <div class="panel-header">
+
+        <div>
+
+            <h2>
+                Recent Clients
+            </h2>
+
+            <p>
+                Recently registered clients
+            </p>
+
+        </div>
+
+
+        <a href="#clients">
+            View All
+        </a>
+
+    </div>
+
+
+    <div
+        id="recentClients"
+        class="client-table">
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CLIENTS
+===================================================== -->
+
+<section
+    id="clients"
+    class="page-section hidden">
+
+<div class="section-heading">
+
+    <div>
+
+        <span class="eyebrow">
+            MANAGEMENT
+        </span>
+
+        <h2>
+            Client Records
+        </h2>
+
+        <p>
+            Search and manage registered clients.
+        </p>
+
+    </div>
+
+
+    <a
+        href="#register"
+        class="primary-button">
+
+        + Add Client
+
+    </a>
+
+</div>
+
+
+
+<!-- SEARCH -->
+
+<div class="search-box">
+
+    <span>
+        ⌕
+    </span>
+
+    <input
+        type="search"
+        id="searchInput"
+        placeholder="Search by name, client ID or phone..."
+        autocomplete="off">
+
+</div>
+
+
+
+<!-- CLIENT LIST -->
+
+<div
+    id="clientList"
+    class="client-grid">
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     REGISTER CLIENT
+===================================================== -->
+
+<section
+    id="register"
+    class="page-section hidden">
+
+<div class="section-heading">
+
+    <div>
+
+        <span class="eyebrow">
+            CLIENT MANAGEMENT
+        </span>
+
+        <h2>
+            Register New Client
+        </h2>
+
+        <p>
+            Create a complete client profile.
+        </p>
+
+    </div>
+
+</div>
+
+
+
+<!-- REGISTRATION FORM -->
+
+<form
+    id="clientForm"
+    class="form-card">
+
+
+    <!-- PERSONAL INFORMATION -->
+
+    <div class="form-section">
+
+        <h3>
+            Personal Information
+        </h3>
+
+
+        <div class="form-grid">
+
+
+            <!-- FULL NAME -->
+
+            <div class="form-group">
+
+                <label for="fullName">
+                    Full Name *
+                </label>
+
+                <input
+                    id="fullName"
+                    name="fullName"
+                    type="text"
+                    placeholder="Enter full name"
+                    autocomplete="name"
+                    required>
+
+            </div>
+
+
+
+            <!-- CLIENT ID -->
+
+            <div class="form-group">
+
+                <label for="clientId">
+                    Client ID *
+                </label>
+
+                <input
+                    id="clientId"
+                    name="clientId"
+                    type="text"
+                    placeholder="Example: NT-0001"
+                    required>
+
+            </div>
+
+
+
+            <!-- DATE OF BIRTH -->
+
+            <div class="form-group">
+
+                <label for="dob">
+                    Date of Birth
+                </label>
+
+                <input
+                    id="dob"
+                    name="dob"
+                    type="date">
+
+            </div>
+
+
+
+            <!-- GENDER -->
+
+            <div class="form-group">
+
+                <label for="gender">
+                    Gender
+                </label>
+
+                <select
+                    id="gender"
+                    name="gender">
+
+                    <option value="">
+                        Select gender
+                    </option>
+
+                    <option value="Male">
+                        Male
+                    </option>
+
+                    <option value="Female">
+                        Female
+                    </option>
+
+                    <option value="Other">
+                        Other
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- PHONE -->
+
+            <div class="form-group">
+
+                <label for="phone">
+                    Phone Number
+                </label>
+
+                <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    placeholder="Phone number"
+                    autocomplete="tel">
+
+            </div>
+
+
+
+            <!-- EMAIL -->
+
+            <div class="form-group">
+
+                <label for="email">
+                    Email Address
+                </label>
+
+                <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="Email address"
+                    autocomplete="email">
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ADDRESS -->
+
+    <div class="form-section">
+
+        <h3>
+            Address
+        </h3>
+
+        <div class="form-group">
+
+            <label for="address">
+                Complete Address
+            </label>
+
+            <textarea
+                id="address"
+                name="address"
+                placeholder="Enter complete address"></textarea>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- SECURITY RECORD -->
+
+    <div class="form-section">
+
+        <h3>
+            Client Security Record
+        </h3>
+
+        <div class="form-group">
+
+            <label for="notes">
+                Notes / Record
+            </label>
+
+            <textarea
+                id="notes"
+                name="notes"
+                placeholder="Enter client record, notes or security information"></textarea>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- FORM BUTTONS -->
+
+    <div class="form-actions">
+
+        <button
+            type="reset"
+            class="secondary-button">
+
+            Clear
+
+        </button>
+
+
+        <button
+            type="submit"
+            class="primary-button">
+
+            Save Client
+
+        </button>
+
+    </div>
+
+</form>
+
+</section>
+
+
+
+<!-- =====================================================
+     CAMERA
+===================================================== -->
+
+<section
+    id="camera"
+    class="page-section hidden">
+
+<div class="section-heading">
+
+    <div>
+
+        <span class="eyebrow">
+            SECURITY CAMERA
+        </span>
+
+        <h2>
+            Video Recording
+        </h2>
+
+        <p>
+            Record security events using your device camera.
+        </p>
+
+    </div>
+
+</div>
+
+
+
+<!-- CAMERA AREA -->
+
+<div class="camera-layout">
+
+
+    <!-- CAMERA -->
+
+    <div class="camera-card">
+
+
+        <div class="camera-header">
+
+            <div>
+
+                <h3>
+                    Live Camera
+                </h3>
+
+                <span id="cameraStatus">
+                    Camera inactive
+                </span>
+
+            </div>
+
+
+            <div id="recordIndicator">
+
+            </div>
+
+        </div>
+
+
+
+        <!-- VIDEO -->
+
+        <div class="video-wrapper">
+
+            <video
+                id="cameraVideo"
+                autoplay
+                muted
+                playsinline>
+            </video>
+
+
+            <div
+                id="cameraPlaceholder"
+                class="camera-placeholder">
+
+                <div>
+                    ◉
+                </div>
+
+                <p>
+                    Camera is currently inactive
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- CAMERA CONTROLS -->
+
+        <div class="camera-controls">
+
+
+            <button
+                type="button"
+                id="startCamera"
+                class="primary-button">
+
+                Start Camera
+
+            </button>
+
+
+            <button
+                type="button"
+                id="recordButton"
+                class="record-button"
+                disabled>
+
+                ● Start Recording
+
+            </button>
+
+
+            <button
+                type="button"
+                id="stopCamera"
+                class="secondary-button">
+
+                Stop Camera
+
+            </button>
+
+        </div>
+
+
+
+        <!-- RECORDING STATUS -->
+
+        <div id="recordStatus">
+
+        </div>
+
+    </div>
+
+
+
+    <!-- RECORDING INFORMATION -->
+
+    <div class="recording-info">
+
+        <h3>
+            Recording Information
+        </h3>
+
+
+        <div class="info-row">
+
+            <span>
+                Status
+            </span>
+
+            <strong id="recordState">
+                Ready
+            </strong>
+
+        </div>
+
+
+        <div class="info-row">
+
+            <span>
+                Format
+            </span>
+
+            <strong>
+                WebM
+            </strong>
+
+        </div>
+
+
+        <div class="info-row">
+
+            <span>
+                Storage
+            </span>
+
+            <strong>
+                Browser
+            </strong>
+
+        </div>
+
+
+        <hr>
+
+
+        <p>
+            Select a client before recording if the video
+            should be associated with a client record.
+        </p>
+
+
+        <!-- CLIENT SELECTION -->
+
+        <label for="videoClient">
+            Client
+        </label>
+
+        <select id="videoClient">
+
+            <option value="">
+                No client selected
+            </option>
+
+        </select>
+
+    </div>
+
+</div>
+
+
+
+<!-- =================================================
+     VIDEO LIBRARY
+================================================= -->
+
+<div class="panel video-library">
+
+    <div class="panel-header">
+
+        <div>
+
+            <h2>
+                Recorded Videos
+            </h2>
+
+            <p>
+                Security video records
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div id="videoList">
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SECURITY RECORDS
+===================================================== -->
+
+<section
+    id="records"
+    class="page-section hidden">
+
+<div class="section-heading">
+
+    <div>
+
+        <span class="eyebrow">
+            SECURITY HISTORY
+        </span>
+
+        <h2>
+            Security Records
+        </h2>
+
+        <p>
+            Client activity and security information.
+        </p>
+
+    </div>
+
+</div>
+
+
+
+<div class="panel">
+
+    <div id="recordsList">
+
+    </div>
+
+</div>
+
+</section>
+
+</main>
+
+
+
+<!-- =====================================================
+     NOTIFICATION
+===================================================== -->
+
+<div
+    id="notification"
+    class="notification"
+    role="alert"
+    aria-live="polite">
+
+<span id="notificationText"></span>
+
+</div>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT FILE
+===================================================== -->
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

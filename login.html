@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security - Login</title>
+
+    <link rel="stylesheet" href="login.css">
+    
+
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="login-box">
+
+            <h1>HOME SECURITY SYSTEM</h1>
+            <p class="subtitle">Your Home Security, All in One Place.</p>
+
+            <h2>Welcome Back!</h2>
+            <p class="description">Please log in to access your dashboard.</p>
+
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input
+                        type="text"
+                        id="username"
+                        placeholder="Enter your username"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter your password"
+                        required
+  >
+                </div>
+
+                <p id="errorMessage"></p>
+
+                <button type="submit">Login</button>
+            </form>
+
+            <p class="footer">
+                Home Security &copy; 2026
+            </p>
+
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
